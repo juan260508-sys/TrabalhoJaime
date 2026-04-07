@@ -9,11 +9,11 @@
 <body>
     <header>
         <div>
-                <img src="" alt="">
-                
+                <img src="" alt=""> 
         </div>
         <div>
-            <input type="text">
+            <input type="text" id="search" class="mecanismo-de-pesquisa">
+            <input type="submit" value="Pesquisa" id="inputButton">
         </div>
         <div>
             <div>
@@ -27,6 +27,21 @@
             </div>
         </div>
     </header>
+ <!-- conteú pricipal da página -->
+    <main>
+        <!-- Divisão do filtro-->
+        <div id="filterProduct"></div>
+        <!--Lista de produtos-->
+        <div id="poducts">
+            <ul style="list-style-type: none;">
+                <li>
+                    <div style="height: 100px; width: 100px; background-color: peru;"></div>
+                </li>
+            </ul>
+        </div>
+    </main>
     
+
+    <script src="/controller/src/main.js"></script>
 </body>
 </html>
