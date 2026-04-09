@@ -425,3 +425,15 @@ main {
     #inputButton { padding: 10px 20px; font-size: 12px; }
     .conta a { padding: 4px 10px; font-size: 11px; }
 }
+
+.produto-img{
+    width: 100px;
+}
+
+.produtoDiv{
+    display: flex;
+    position: fixed;
+    left: 00px;
+    height: 500px;
+    width: 900px;
+}
