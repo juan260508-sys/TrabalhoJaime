@@ -1,66 +1,77 @@
 
 let data = {
     produto: [{
-            nome: "foneDeOuvido",
-            preco: 20,
+            nome: "Fone de ouvido",
+            preco: 20.00,
             descricao: "",
             quantidade: 29,
             img: "./../../../assets/img/fonesDeOuvidos.webp"
         },{
-            nome: "microfoneDeMesa",
+            nome: "Microfone de mesa",
             preco: 259.99,
             descricao: "",
-            quantidade: 78
+            quantidade: 78,
+            img: "./../../../assets/img/microfone.webp"
         },{
-            nome: "caixaDeSom",
-            preco: 80,
+            nome: "Caixa De Som",
+            preco: 80.00,
             descricao: "",
-            quantidade: 45
+            quantidade: 45,
+            img: "./../../../assets/img/baixados.webp"
         },{
-            nome: "powerBank",
-            preco: 70,
+            nome: "PowerBank",
+            preco: 70.00,
             descricao: "",
-            quantidade: 114
+            quantidade: 114,
+            img: "./../../../assets/img/powerBank.webp"
         },{
-            nome: "centralMultimidia",
+            nome: "Central Multimidia",
             preco: 495.58,
             descricao: "",
-            quantidade: 63
+            quantidade: 63,
+            img: "./../../../assets/img/centralMultimidia.webp"
         },{
-            nome: "microondas",
-            preco: 386,
+            nome: "Microondas",
+            preco: 386.00,
             descricao: "",
-            quantidade: 8
+            quantidade: 8,
+            img: "./../../../assets/img/microondas.webp"
         },{
-            nome: "ventilador",
-            preco: 150,
+            nome: "Ventilador",
+            preco: 150.00,
             descricao: "" ,
-            quantidade: 7
+            quantidade: 7,
+            img: "./../../../assets/img/ventilador.webp"
         },{
-            nome: "tecladoMecanico",
-            preco: 170,
+            nome: "Teclado Mecanico",
+            preco: 170.00,
             descricao: "",
-            quantidade: 46
+            quantidade: 46,
+            img: "./../../../assets/img/tecladoMecanico.webp"
         },{
-            nome: "mouse",
-            preco: 10,
+            nome: "Mouse",
+            preco: 10.00,
             descricao: "",
-            quantidade: 178
+            quantidade: 178,
+            img: "./../../../assets/img/mouse.webp"
         },{
-            nome: "monitor",
-            preco: 600,
+            nome: "Monitor",
+            preco: 600.00,
             descricao: "",
-            quantidade: 985
+            quantidade: 985,
+            img: "./../../../assets/img/monitor.webp"
         },{
-            nome: "alexa",
-            preco: 80,
+            nome: "Alexa",
+            preco: 80.00,
             descricao: "",
-            quantidade: 78
+            quantidade: 78,
+            img: "./../../../assets/img/alexa.webp"
         },{
-            nome: "impressoraALazer",
-            preco: 2080,
+            nome: "Impressora a Lazer",
+            preco: 2080.00,
             descricao: "",
-            quantidade: 18
+            quantidade: 18,
+            img: "./../../../assets/img/impressora.webp"
         }
     ]
 }
@@ -71,7 +82,25 @@ export function winErrorSearch(){
 
 export function viewProducts(tag){
     data["produto"].forEach(element => {
-        console.log(element)
-        console.log("olá")
+        const li = document.createElement("li")
+        const divProduct = document.createElement("div")
+        const imgProduct = document.createElement("img")
+        const nameProduct = document.createElement("h4")
+        const precoProduct = document.createElement("p")
+
+        nameProduct.innerText = element.nome
+        precoProduct.innerText = "R$ " + parseFloat(element.preco)
+        imgProduct.src = element.img
+
+        divProduct.classList.add("produto")
+        imgProduct.classList.add("produto-img")
+        nameProduct.classList.add("produto-name")
+        precoProduct.classList.add("produto-preco")
+
+        tag.appendChild(li)
+        li.appendChild(divProduct)
+        divProduct.appendChild(imgProduct)
+        divProduct.appendChild(nameProduct)
+        divProduct.appendChild(precoProduct)
     });
 }
