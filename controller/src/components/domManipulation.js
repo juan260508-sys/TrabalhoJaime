@@ -1,75 +1,77 @@
 
 let data = {
-    produto: {
-        foneDeOuvido: {
+    produto: [{
+            nome: "foneDeOuvido",
             preco: 20,
             descricao: "",
-            quantidade: 29
-        },
-        microfoneDeMesa: {
+            quantidade: 29,
+            img: "./../../../assets/img/fonesDeOuvidos.webp"
+        },{
+            nome: "microfoneDeMesa",
             preco: 259.99,
             descricao: "",
             quantidade: 78
-        },
-        caixaDeSom: {
+        },{
+            nome: "caixaDeSom",
             preco: 80,
             descricao: "",
             quantidade: 45
-        },
-        powerBank: {
+        },{
+            nome: "powerBank",
             preco: 70,
             descricao: "",
             quantidade: 114
-        },
-        centralMultimidia: {
+        },{
+            nome: "centralMultimidia",
             preco: 495.58,
             descricao: "",
             quantidade: 63
-        },
-        microondas: {
+        },{
+            nome: "microondas",
             preco: 386,
             descricao: "",
             quantidade: 8
-        },
-        ventilador: {
+        },{
+            nome: "ventilador",
             preco: 150,
             descricao: "" ,
             quantidade: 7
-        },
-        tecladoMecanico: {
+        },{
+            nome: "tecladoMecanico",
             preco: 170,
             descricao: "",
             quantidade: 46
-        },
-        mouse: {
+        },{
+            nome: "mouse",
             preco: 10,
             descricao: "",
             quantidade: 178
-        },
-        monitor: {
+        },{
+            nome: "monitor",
             preco: 600,
             descricao: "",
             quantidade: 985
-        },
-        alexa: {
+        },{
+            nome: "alexa",
             preco: 80,
             descricao: "",
             quantidade: 78
-        },
-        impressoraALazer: {
+        },{
+            nome: "impressoraALazer",
             preco: 2080,
             descricao: "",
             quantidade: 18
         }
-    }
+    ]
 }
 
-function winErrorSearch(){
+export function winErrorSearch(){
     console.log("Error")
 }
 
-function viewProducts(){
-    
+export function viewProducts(tag){
+    data["produto"].forEach(element => {
+        console.log(element)
+        console.log("olá")
+    });
 }
-
-export default winErrorSearch

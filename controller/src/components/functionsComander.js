@@ -1,11 +1,9 @@
-import winErrorSearch from "./domManipulation"
+import { winErrorSearch } from "./domManipulation"
 
-function search(name){
-    if(name != ""){
+function search(name = "none"){
 
-    } else{
-        winErrorSearch()
-    }
 }
 
-export default serach
+module.exports = {
+    search
+}
