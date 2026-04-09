@@ -6,8 +6,8 @@
     {
       "id": "tRO02COgjKUx173eHQY8g",
       "type": "rectangle",
-      "x": 424,
-      "y": 121,
+      "x": 425,
+      "y": 120,
       "width": 1013,
       "height": 641,
       "angle": 0,
@@ -25,11 +25,11 @@
         "type": 3
       },
       "seed": 2107495845,
-      "version": 130,
-      "versionNonce": 16533797,
+      "version": 131,
+      "versionNonce": 435146155,
       "isDeleted": false,
       "boundElements": [],
-      "updated": 1773966785950,
+      "updated": 1775606541586,
       "link": null,
       "locked": false
     },
