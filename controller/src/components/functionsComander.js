@@ -1,9 +1,9 @@
-import { winErrorSearch } from "./domManipulation"
+import { winErrorSearch, searchProduct } from "./domManipulation"
 
-function search(name = "none"){
-    
-}
-
-module.exports = {
-    search
+export function search(name = "none") {
+    if (name != "none" && name != "") {
+        searchProduct(name)
+    } else {
+        winErrorSearch()
+    }
 }
