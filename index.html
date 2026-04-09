@@ -4,29 +4,81 @@
     <link rel="stylesheet" href="/veiw/estilos/style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Orbix - Loja de Eletrônicos</title>
 </head>
 <body>
-    <header>
-        <div class="logotipo">
-                <img src="" alt="">
-                
+
+    <!-- LOGO MINIATURA - CANTO SUPERIOR ESQUERDO -->
+    <div class="logo-mini" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <div class="logo-mini-icon"></div>
+        <span class="logo-mini-text">ORBIX</span>
+    </div>
+
+    <!-- LOGO PRINCIPAL GRANDE - ACIMA DA BARRA DE PESQUISA -->
+    <div class="logo-principal-container">
+        <div class="logo-principal">
+            <div class="logo-grande-icon"></div>
+            <div class="logo-grande-text">ORBIX</div>
         </div>
-        <div class="pesquisa">
-            <input type="text">
+        <div class="logo-slogan">
+            <span>⚡</span> TECNOLOGIA QUE TRANSFORMA <span>⚡</span>
+        </div>
+    </div>
+
+    <header>
+        <div>
+                <img src="" alt=""> 
+        </div>
+        <div>
+            <input type="text" id="search" class="mecanismo-de-pesquisa" placeholder="🔍 Pesquisar produtos...">
+            <input type="submit" value="Pesquisa" id="inputButton">
         </div>
         <div class="conta">
             <div>
                 <ul>
                     <li>
-                        <a href="">user</a>
+                        <a href="#">👤 user</a>
                     </li>
-                    <li><a href="">favoritos</a></li>
-                    <li><a href="">cards</a></li>
+                    <li><a href="#">❤️ favoritos</a></li>
+                    <li><a href="#">📦 cards</a></li>
                 </ul>
             </div>
         </div>
     </header>
+
+    <!-- conteú pricipal da página -->
+    <main>
+        <!-- Divisão do filtro-->
+        <div id="filterProduct"></div>
+        <!--Lista de produtos-->
+        <div id="poducts">
+            <ul style="list-style-type: none;" id="listaProdutos">
+                <li>
+                    <div style="height: 100px; width: 100px; background-color: peru;"></div>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+    <div class="scroll-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑
+    </div>
+
+    <script type="module" src="/controller/src/main.js"></script>
     
+    <script>
+        // Controlar botão de voltar ao topo
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.querySelector('.scroll-top');
+            if (scrollTop) {
+                if (window.scrollY > 300) {
+                    scrollTop.classList.add('show');
+                } else {
+                    scrollTop.classList.remove('show');
+                }
+            }
+        });
+    </script>
 </body>
 </html>
